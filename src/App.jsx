@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [inputFields, setInputFields] = useState([{ name: "" }]);
+  const [inputFields, setInputFields] = useState([{ name: "", score: "" }]);
 
   const handleFormChange = (i, e) => {
     const data = [...inputFields];
@@ -11,7 +11,7 @@ function App() {
   };
 
   const addFormFields = () => {
-    const newfield = { name: "" };
+    const newfield = { name: "", score: "" };
     setInputFields([...inputFields, newfield]);
   };
 
@@ -37,6 +37,14 @@ function App() {
               name="name"
               value={element.name}
               placeholder="what do you want"
+              onChange={(e) => handleFormChange(index, e)}
+            />
+            <label>Score</label>
+            <input
+              type="number"
+              name="score"
+              value={element.score}
+              placeholder="score"
               onChange={(e) => handleFormChange(index, e)}
             />
             {index ? (

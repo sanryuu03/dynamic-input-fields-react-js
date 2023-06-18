@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.0.02 (2023-06-18)
+
+- dynamic two (multiple) input fields react.js.
+
 ## v1.0.01 (2023-06-16)
 
 - CHANGELOG.md.
